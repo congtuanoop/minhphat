@@ -35,7 +35,7 @@ function AddExport() {
                     </li>
                 ))}
             </ul>
-            <h3>TỔNG CHI</h3> {tongchi}
+            <h3>TỔNG CHI : {tongchi}</h3>
             {localStorage.setItem('tongchi', tongchi)}
 
         </div>

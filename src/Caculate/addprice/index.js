@@ -20,6 +20,8 @@ function AddChi() {
                 newNumber
             ]
         })
+        setPriceName('');
+        setPriceNumber('')
     }
 
     return (
@@ -37,7 +39,7 @@ function AddChi() {
                     </li>
                 ))}
             </ul>
-            <h3>TỔNG THU</h3> {tongthu}
+            <h3>TỔNG THU : {tongthu}</h3>
             {localStorage.setItem('tongthu', tongthu)}
 
         </div>
