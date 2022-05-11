@@ -4,6 +4,7 @@ import './App.css';
 import Ex from './Ex';
 
 function App() {
+
   const [toggle, changeToggle] = useState(true)
   const [add, setAdd] = useState([])
   const [ex, seEx] = useState([])
@@ -48,6 +49,7 @@ function App() {
   }
 
   return (
+
     <div className="App">
       <div className='dmy'><p>{d.getDate()}/</p><p>{d.getMonth() + 1}</p>/<p>{d.getFullYear()}</p></div>
       {toggle ? <Add handleAdd={handleAdd} /> : <Ex handleEx={handleEx} />}
@@ -62,7 +64,7 @@ function App() {
           </li>
         ))}
       </ul>
-      <h3 className='red'>Tổng thu : <p className='num red'>{Intl.NumberFormat().format(sumAdd)},000</p></h3>
+      <h3 className='red'>Tổng thu : <p className='num red'>{Intl.NumberFormat().format(sumAdd)}.000</p></h3>
       <hr />
 
       <h2> Tiền chi : </h2>
@@ -77,7 +79,7 @@ function App() {
       <h3 className='red'>Tổng chi : <p className='num'>{Intl.NumberFormat().format(sumEx)},000</p></h3>
       <hr />
 
-      <h2 className='red'>Tiền còn : <p className='num red'>{Intl.NumberFormat().format(sumAdd - sumEx)},000</p></h2>
+      <h2 className='red'>Tiền còn : <p className='num red'>{Intl.NumberFormat().format(sumAdd - sumEx)}.000</p></h2>
 
       <footer>
         Copyright © : Trương Công Tuấn
