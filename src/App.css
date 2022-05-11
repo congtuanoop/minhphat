@@ -42,4 +42,10 @@ footer {
     position: fixed;
     bottom: 0;
     color: red;
+    margin-left: -10px;
+}
+
+.dmy {
+    text-align: center;
+    font-size: 15px;
 }

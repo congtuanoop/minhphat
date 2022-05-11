@@ -8,6 +8,8 @@ function App() {
   const [add, setAdd] = useState([])
   const [ex, seEx] = useState([])
 
+  const d = new Date();
+
   let sumAdd = add.reduce((total, curren) => total = total + Number.parseInt(curren.moneyAdd), 0)
   let sumEx = ex.reduce((total, curren) => total = total + Number.parseInt(curren.moneyEx), 0)
 
@@ -35,6 +37,7 @@ function App() {
 
   return (
     <div className="App">
+      <div className='dmy'><p>{d.getDate()}</p> <p>{d.getMonth() + 1}</p> <p>{d.getFullYear()}</p></div>
       {toggle ? <Add handleAdd={handleAdd} /> : <Ex handleEx={handleEx} />}
       <button onClick={handleToggle}>Togle</button>
 
@@ -62,7 +65,7 @@ function App() {
         <p></p>
         Email : congtuanoop@gmail.com || fb : facebook/congtuanoop
       </footer>
-    </div>
+    </div >
   );
 }
 
