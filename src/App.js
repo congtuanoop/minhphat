@@ -51,7 +51,7 @@ function App() {
     <div className="App">
       <div className='dmy'><p>{d.getDate()}</p> <p>{d.getMonth() + 1}</p> <p>{d.getFullYear()}</p></div>
       {toggle ? <Add handleAdd={handleAdd} /> : <Ex handleEx={handleEx} />}
-      <button onClick={handleToggle}>Togle</button>
+      <button className='toggle' onClick={handleToggle}>Toggle</button>
 
       <h2>Tiền thu khách : </h2>
       <ul>
