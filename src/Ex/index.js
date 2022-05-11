@@ -25,6 +25,7 @@ function Ex({ handleEx }) {
                 placeholder="Enter Name..." />
             <br />
             <input
+                type='number'
                 ref={numberRef}
                 onChange={(e) => setMoneyEx(e.target.value)}
                 placeholder="Enter money..." />

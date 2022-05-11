@@ -62,10 +62,10 @@ function App() {
           </li>
         ))}
       </ul>
-      <h3>Tổng thu : <p className='num'>{Intl.NumberFormat().format(sumAdd)},000</p></h3>
+      <h3 className='red'>Tổng thu : <p className='num red'>{Intl.NumberFormat().format(sumAdd)},000</p></h3>
       <hr />
 
-      <h2>Tiền chi : </h2>
+      <h2> Tiền chi : </h2>
       <ul>
         {ex.map((exLi, index) => (
           <li key={index}>
@@ -74,7 +74,7 @@ function App() {
           </li>
         ))}
       </ul>
-      <h3>Tổng chi : <p className='num'>{Intl.NumberFormat().format(sumEx)}</p></h3>
+      <h3 className='red'>Tổng chi : <p className='num'>{Intl.NumberFormat().format(sumEx)},000</p></h3>
       <hr />
 
       <h2>Tiền còn : <p className='num red'>{Intl.NumberFormat().format(sumAdd - sumEx)},000</p></h2>

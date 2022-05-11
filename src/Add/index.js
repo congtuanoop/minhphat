@@ -25,6 +25,7 @@ function Add({ handleAdd }) {
                 placeholder="Enter Name..." />
             <br />
             <input
+                type='number'
                 ref={moneyRef}
                 onChange={(e) => setMoneyAdd(e.target.value)}
                 placeholder="Enter money..." />
