@@ -21,3 +21,25 @@ input, button {
     padding: 5px 5px;
     margin-top: 10px;
 }
+
+li {
+    margin-left: 40px;
+}
+
+p{
+    display: inline;
+}
+
+.num {
+    float: right;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    opacity: 0.7;
+    font-size: 13px;
+    position: fixed;
+    bottom: 0;
+    color: red;
+}

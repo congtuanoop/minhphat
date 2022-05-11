@@ -41,19 +41,27 @@ function App() {
       <h2>Tiền thu khách : </h2>
       <ul>
         {add.map((addLi, index) => (
-          <li key={index}>{addLi.nameAdd} : {addLi.moneyAdd}</li>
+          <li key={index}>{addLi.nameAdd} : <p className='num'>{Intl.NumberFormat().format(addLi.moneyAdd)}</p></li>
         ))}
       </ul>
-      <h3>Tổng thu : {sumAdd}</h3>
+      <h3>Tổng thu : <p className='num'>{Intl.NumberFormat().format(sumAdd)}</p></h3>
+      <hr />
 
       <h2>Tiền chi : </h2>
       <ul>
         {ex.map((exLi, index) => (
-          <li key={index}>{exLi.nameEx} : {exLi.moneyEx}</li>
+          <li key={index}>{exLi.nameEx} : <p className='num'>{exLi.moneyEx}</p></li>
         ))}
       </ul>
-      <h3>Tổng chi : {sumEx}</h3>
-      <h2>Tiền còn : {sumAdd - sumEx}</h2>
+      <h3>Tổng chi : <p className='num'>{Intl.NumberFormat().format(sumEx)}</p></h3>
+      <hr />
+
+      <h2>Tiền còn : <p className='num'>{Intl.NumberFormat().format(sumAdd - sumEx)}</p></h2>
+
+      <footer>
+        <p></p>
+        Email : congtuanoop@gmail.com || fb : facebook/congtuanoop
+      </footer>
     </div>
   );
 }
