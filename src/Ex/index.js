@@ -18,17 +18,16 @@ function Ex({ handleEx }) {
 
     return (
         <div>
-            <h1>TIỀN CHI</h1>
             <input
                 ref={nameRef}
                 onChange={(e) => setNameEx(e.target.value)}
-                placeholder="Enter Name..." />
+                placeholder="Typing name..." />
             <br />
             <input
                 type='number'
                 ref={numberRef}
                 onChange={(e) => setMoneyEx(e.target.value)}
-                placeholder="Enter money..." />
+                placeholder="Typing money..." />
             <br />
             <button
                 onClick={handleExForm}

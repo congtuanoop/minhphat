@@ -49,7 +49,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className='dmy'><p>{d.getDate()}</p> <p>{d.getMonth() + 1}</p> <p>{d.getFullYear()}</p></div>
+      <div className='dmy'><p>{d.getDate()}/</p><p>{d.getMonth() + 1}</p>/<p>{d.getFullYear()}</p></div>
       {toggle ? <Add handleAdd={handleAdd} /> : <Ex handleEx={handleEx} />}
       <button onClick={handleToggle}>Toggle</button>
 
@@ -77,7 +77,7 @@ function App() {
       <h3 className='red'>Tổng chi : <p className='num'>{Intl.NumberFormat().format(sumEx)},000</p></h3>
       <hr />
 
-      <h2>Tiền còn : <p className='num red'>{Intl.NumberFormat().format(sumAdd - sumEx)},000</p></h2>
+      <h2 className='red'>Tiền còn : <p className='num red'>{Intl.NumberFormat().format(sumAdd - sumEx)},000</p></h2>
 
       <footer>
         Copyright © : Trương Công Tuấn

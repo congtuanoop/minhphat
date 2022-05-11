@@ -18,17 +18,16 @@ function Add({ handleAdd }) {
 
     return (
         <div>
-            <h1>TIỀN THU</h1>
             <input
                 ref={addRef}
                 onChange={(e) => setNameAdd(e.target.value)}
-                placeholder="Enter Name..." />
+                placeholder="Typing name..." />
             <br />
             <input
                 type='number'
                 ref={moneyRef}
                 onChange={(e) => setMoneyAdd(e.target.value)}
-                placeholder="Enter money..." />
+                placeholder="Typing money..." />
             <br />
             <button
                 onClick={handleAddForm}
