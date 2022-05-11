@@ -70,7 +70,7 @@ function App() {
         {ex.map((exLi, index) => (
           <li key={index}>
             <p>{exLi.nameEx} :</p> <p className='delete' onClick={() => handleDelEx(index)}>&times;</p> <p className='num'>
-              {exLi.moneyEx}</p>
+              {Intl.NumberFormat().format(exLi.moneyEx)}</p>
           </li>
         ))}
       </ul>
