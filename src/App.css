@@ -1,3 +1,19 @@
-.App{
-    margin:  0 10px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+#root {
+    padding: 10px;
+}
+
+input, button {
+    width: 100%;
+    padding: 5px 5px;
+    margin-top: 10px;
 }
