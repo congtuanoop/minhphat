@@ -80,9 +80,7 @@ function App() {
       <h2>Tiền còn : <p className='num red'>{Intl.NumberFormat().format(sumAdd - sumEx)},000</p></h2>
 
       <footer>
-        <p></p>
-        Email : congtuanoop@gmail.com <br />
-        fb : facebook/congtuanoop
+        Copyright © : Trương Công Tuấn
       </footer>
     </div >
   );
