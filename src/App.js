@@ -8,7 +8,8 @@ function App() {
   const [add, setAdd] = useState([])
   const [ex, seEx] = useState([])
 
-
+  let sumAdd = add.reduce((total, curren) => total = total + Number.parseInt(curren.moneyAdd), 0)
+  let sumEx = ex.reduce((total, curren) => total = total + Number.parseInt(curren.moneyEx), 0)
 
   function handleToggle() {
     changeToggle(!toggle)
@@ -43,7 +44,7 @@ function App() {
           <li key={index}>{addLi.nameAdd} : {addLi.moneyAdd}</li>
         ))}
       </ul>
-      <h3>Tổng thu : {add.reduce((total, curren) => total = total + Number.parseInt(curren.moneyAdd), 0)}</h3>
+      <h3>Tổng thu : {sumAdd}</h3>
 
       <h2>Tiền chi : </h2>
       <ul>
@@ -51,8 +52,8 @@ function App() {
           <li key={index}>{exLi.nameEx} : {exLi.moneyEx}</li>
         ))}
       </ul>
-      <h3>Tổng chi : {ex.reduce((total, curren) => total = total + Number.parseInt(curren.moneyEx), 0)}</h3>
-
+      <h3>Tổng chi : {sumEx}</h3>
+      <h2>Tiền còn : {sumAdd - sumEx}</h2>
     </div>
   );
 }
