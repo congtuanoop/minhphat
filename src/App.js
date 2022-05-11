@@ -76,7 +76,7 @@ function App() {
           </li>
         ))}
       </ul>
-      <h3 className='red'>Tổng chi : <p className='num'>{Intl.NumberFormat().format(sumEx)},000</p></h3>
+      <h3 className='red'>Tổng chi : <p className='num'>{Intl.NumberFormat().format(sumEx)}.000</p></h3>
       <hr />
 
       <h2 className='red'>Tiền còn : <p className='num red'>{Intl.NumberFormat().format(sumAdd - sumEx)}.000</p></h2>
