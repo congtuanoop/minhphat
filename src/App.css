@@ -34,11 +34,15 @@ p{
     float: right;
 }
 
+.red {
+    color: red;
+}
+
 footer {
     text-align: center;
     width: 100%;
     opacity: 0.7;
-    font-size: 13px;
+    font-size: 10px;
     position: fixed;
     bottom: 0;
     color: red;
@@ -48,4 +52,10 @@ footer {
 .dmy {
     text-align: center;
     font-size: 15px;
+}
+
+.delete {
+    cursor: pointer;
+    color: red;
+    font-size: 20px;
 }

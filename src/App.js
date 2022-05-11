@@ -35,6 +35,18 @@ function App() {
     })
   }
 
+  const handleDelAdd = (index) => {
+    const newAdd = [...add];
+    newAdd.splice(index, 1);
+    setAdd(newAdd)
+  }
+
+  const handleDelEx = (index) => {
+    const newAdd = [...ex];
+    newAdd.splice(index, 1);
+    seEx(newAdd)
+  }
+
   return (
     <div className="App">
       <div className='dmy'><p>{d.getDate()}</p> <p>{d.getMonth() + 1}</p> <p>{d.getFullYear()}</p></div>
@@ -44,26 +56,33 @@ function App() {
       <h2>Tiền thu khách : </h2>
       <ul>
         {add.map((addLi, index) => (
-          <li key={index}>{addLi.nameAdd} : <p className='num'>{Intl.NumberFormat().format(addLi.moneyAdd)}</p></li>
+          <li key={index}>
+            <p>{addLi.nameAdd} :</p> <p className='num'>{Intl.NumberFormat().format(addLi.moneyAdd)}</p>
+            <p className='delete' onClick={() => handleDelAdd(index)}>&times;</p>
+          </li>
         ))}
       </ul>
-      <h3>Tổng thu : <p className='num'>{Intl.NumberFormat().format(sumAdd)}</p></h3>
+      <h3>Tổng thu : <p className='num'>{Intl.NumberFormat().format(sumAdd)},000</p></h3>
       <hr />
 
       <h2>Tiền chi : </h2>
       <ul>
         {ex.map((exLi, index) => (
-          <li key={index}>{exLi.nameEx} : <p className='num'>{exLi.moneyEx}</p></li>
+          <li key={index}>
+            <p>{exLi.nameEx} :</p> <p className='delete' onClick={() => handleDelEx(index)}>&times;</p> <p className='num'>
+              {exLi.moneyEx}</p>
+          </li>
         ))}
       </ul>
       <h3>Tổng chi : <p className='num'>{Intl.NumberFormat().format(sumEx)}</p></h3>
       <hr />
 
-      <h2>Tiền còn : <p className='num'>{Intl.NumberFormat().format(sumAdd - sumEx)}</p></h2>
+      <h2>Tiền còn : <p className='num red'>{Intl.NumberFormat().format(sumAdd - sumEx)},000</p></h2>
 
       <footer>
         <p></p>
-        Email : congtuanoop@gmail.com || fb : facebook/congtuanoop
+        Email : congtuanoop@gmail.com <br />
+        fb : facebook/congtuanoop
       </footer>
     </div >
   );
